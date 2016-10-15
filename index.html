@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Github starred projects</title>
+    <link href="https://styleguide.brainly.com/64.1.0/style-guide.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="custom-styles.css" media="screen">
+    <script type="text/javascript" src="index.js" charset="utf-8" async></script>
+  </head>
+  <body>
+
+    <div class="sg-layout">
+
+      <div class="sg-header">
+        <div class="sg-header__container">
+          <div class="sg-header__left">
+            <h2 class="sg-header-primary sg-header-primary--light">
+              Github challange
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-layout__container">
+
+        <div class="sg-layout__content">
+          <div class="sg-layout__box sg-layout__box--custom">
+            <form action="#">
+              <input type="text" id="gh-user-one" class="sg-input sg-input--spaced-bottom" placeholder="User One">
+              <input type="text" id="gh-user-two" class="sg-input sg-input--spaced-bottom" placeholder="User Two">
+              <button value="submit" id="gh-button" class="sg-button-primary sg-button-primary--alt">
+                  <div class="sg-button-primary__hole">
+                      Search!
+                  </div>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="sg-layout__aside-content sg-layout__aside-content--custom">
+          <p class="sg-text">Insert two usernames and serach for repos starred by this user on GitHub</p>
+        </div>
+
+        <!-- USER ONE -->
+        <div class="sg-box sg-box--full sg-box--full-disabled" id="full-box-one">
+            <div class="sg-box__hole" id="gh-user-one-headline"></div>
+            <ul class="sg-box__items" id="gh-user-one-items"></ul>
+            <div class="sg-content-box__actions--nav">
+              <button class="sg-button-secondary sg-button-secondary--light-blue-inverse sg-button-secondary--alt-disabled" id="prev-page-user-one">Previous page</button>
+              <button class="sg-button-secondary sg-button-secondary--gray-inverse" id="loading-one">Load more items</button>
+            </div>
+        </div>
+
+        <!-- USER TWO -->
+        <div class="sg-box sg-box--full sg-box--full-disabled" id="full-box-two">
+            <div class="sg-box__hole" id="gh-user-two-headline"></div>
+            <ul class="sg-box__items" id="gh-user-two-items"></ul>
+            <div class="sg-content-box__actions--nav">
+              <button class="sg-button-secondary sg-button-secondary--light-blue-inverse sg-button-secondary--alt-disabled" id="prev-page-user-two">Previous page</button>
+              <button class="sg-button-secondary sg-button-secondary--gray-inverse" id="loading-two">Load more items</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
