@@ -1,19 +1,19 @@
 /*SOME CUSTOM STYLES*/
-.sg-box__items {
+.sg-box__items--custom {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   padding: 0;
   justify-content: space-between;
 }
-.sg-box-custom {
+.sg-box--custom {
   width: 100%;
   margin-bottom: 25px;
 }
 .sg-layout__aside-content--custom {
   padding: 1.5rem 24px 1.5rem;
 }
-.sg-box--full-disabled {
+.sg-box--disabled {
   display: none;
 }
 .sg-button-secondary--alt-disabled {
@@ -36,12 +36,12 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .sg-box-custom {
+  .sg-box--custom {
     width: 48%;
   }
 }
 @media (min-width: 1024px) {
-  .sg-box-custom {
+  .sg-box--custom {
     width: 32%;
   }
 }

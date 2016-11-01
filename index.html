@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Github starred projects</title>
     <link href="https://styleguide.brainly.com/64.1.0/style-guide.css" rel="stylesheet"/>
     <link rel="stylesheet" href="custom-styles.css" media="screen">
@@ -25,15 +26,13 @@
 
         <div class="sg-layout__content">
           <div class="sg-layout__box sg-layout__box--custom">
-            <form action="#">
-              <input type="text" id="gh-user-one" class="sg-input sg-input--spaced-bottom" placeholder="User One">
-              <input type="text" id="gh-user-two" class="sg-input sg-input--spaced-bottom" placeholder="User Two">
-              <button value="submit" id="gh-button" class="sg-button-primary sg-button-primary--alt">
-                  <div class="sg-button-primary__hole">
-                      Search!
-                  </div>
-              </button>
-            </form>
+            <input type="text" id="gh-user-one" class="sg-input sg-input--spaced-bottom" placeholder="User One">
+            <input type="text" id="gh-user-two" class="sg-input sg-input--spaced-bottom" placeholder="User Two">
+            <button value="submit" id="gh-button" class="sg-button-primary sg-button-primary--alt">
+                <div class="sg-button-primary__hole">
+                    Search!
+                </div>
+            </button>
           </div>
         </div>
         <div class="sg-layout__aside-content sg-layout__aside-content--custom">
@@ -41,9 +40,9 @@
         </div>
 
         <!-- USER ONE -->
-        <div class="sg-box sg-box--full sg-box--full-disabled" id="full-box-one">
+        <div class="sg-box sg-box--full sg-box--disabled" id="full-box-one">
             <div class="sg-box__hole" id="gh-user-one-headline"></div>
-            <ul class="sg-box__items" id="gh-user-one-items"></ul>
+            <ul class="sg-box__items sg-box__items--custom" id="gh-user-one-items"></ul>
             <div class="sg-content-box__actions--nav">
               <button class="sg-button-secondary sg-button-secondary--light-blue-inverse sg-button-secondary--alt-disabled" id="prev-page-user-one">Previous page</button>
               <button class="sg-button-secondary sg-button-secondary--gray-inverse" id="loading-one">Load more items</button>
@@ -51,9 +50,9 @@
         </div>
 
         <!-- USER TWO -->
-        <div class="sg-box sg-box--full sg-box--full-disabled" id="full-box-two">
+        <div class="sg-box sg-box--full sg-box--disabled" id="full-box-two">
             <div class="sg-box__hole" id="gh-user-two-headline"></div>
-            <ul class="sg-box__items" id="gh-user-two-items"></ul>
+            <ul class="sg-box__items sg-box__items--custom" id="gh-user-two-items"></ul>
             <div class="sg-content-box__actions--nav">
               <button class="sg-button-secondary sg-button-secondary--light-blue-inverse sg-button-secondary--alt-disabled" id="prev-page-user-two">Previous page</button>
               <button class="sg-button-secondary sg-button-secondary--gray-inverse" id="loading-two">Load more items</button>
