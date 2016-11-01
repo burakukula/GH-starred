@@ -93,7 +93,7 @@ const GithubApp = class GithubStarred {
   searchEvent(user, page, block, headline, container) {
     this.fetchData(user, page)
       .then((data) => {
-        block.classList.remove('sg-box--full-disabled');
+        block.classList.remove('sg-box--disabled');
         headline.innerHTML = `<h2 class=\"sg-header-primary sg-header-primary--xsmall\">Repos starred by ${user}!</h2>`;
         const userData = this.tranformData(data);
         const userItems = this.prepareItemTemplate(userData).join('');
@@ -148,7 +148,7 @@ const GithubApp = class GithubStarred {
   // Prepare html template after transform data
   prepareItemTemplate(data) {
     return data.map((item) => {
-      let htmlTemplate = `<li class=\"sg-box sg-box-custom\"><div class=\"sg-box__hole\"><div class=\"sg-content-box\"><div class=\"sg-content-box__header\"><div class=\"sg-avatar sg-avatar--small\"><img class=\"sg-avatar__image\" src=\"${item.ownerAvatar}\"></div><h2 class="sg-header-secondary sg-header-secondary--custom">${item.name} created by ${item.ownerName}</h2></div><p class="sg-text">${item.description}</p><div class=\"sg-content-box__actions\"><a href=\"${item.url}\" target=\"_blank\" class=\"sg-link sg-link--mint\">Go to the project</a></div></div></div></div></div></li>`;
+      let htmlTemplate = `<li class=\"sg-box sg-box--custom\"><div class=\"sg-box__hole\"><div class=\"sg-content-box\"><div class=\"sg-content-box__header\"><div class=\"sg-avatar sg-avatar--small\"><img class=\"sg-avatar__image\" src=\"${item.ownerAvatar}\"></div><h2 class="sg-header-secondary sg-header-secondary--custom">${item.name} created by ${item.ownerName}</h2></div><p class="sg-text">${item.description}</p><div class=\"sg-content-box__actions\"><a href=\"${item.url}\" target=\"_blank\" class=\"sg-link sg-link--mint\">Go to the project</a></div></div></div></div></div></li>`;
       return htmlTemplate;
     });
   }
